@@ -68,5 +68,5 @@ def gtf_stats(gtf_path):
     print(f"Unannotated genes: {len(unannotated_genes)} ({len(unannotated_genes)/float(len(genes))*100:.1f}%)")
 
 if __name__ == "__main__":
-    gtf_path = "final_merged.gtf"  # change this to your file as needed
+    gtf_path = "final_merged.gtf"  # change the file as required
     gtf_stats(gtf_path)
