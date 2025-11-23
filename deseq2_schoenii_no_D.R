@@ -8,11 +8,11 @@
 
 # ---- File and directory setup ----
 species <- "S. schoenii"
-counts_file <- "gene_counts_T_sch_stringent.txt"
-gtf_file <- "schoenii_annotated_final.gtf"
+counts_file <- "gene_counts_schoenii.txt"
+gtf_file <- "schoenii_annotation.gtf"
 blastx_file <- "all_genes_schoneii_out_blastx.best_per_gene.compact.standard.tsv"
-output_dir <- "csv_results_schoenii_T_stringent_padj"
-plots_dir <- "pdf_plots_schoenii_T_stringent_padj"
+output_dir <- "csv_results_schoenii"
+plots_dir <- "pdf_plots_schoenii"
 dir.create(output_dir, showWarnings = FALSE)
 dir.create(plots_dir, showWarnings = FALSE)
 
@@ -78,7 +78,7 @@ wrap_comp_label <- function(x) {
 # ---- Load & preprocess ----
 counts <- read.table(counts_file, header=TRUE, row.names=1, comment.char="#")
 counts <- counts[, 6:ncol(counts)]
-colnames(counts) <- gsub("_clean_stringent_sch_Aligned.out.sorted.dedup.bam", "", colnames(counts))
+colnames(counts) <- gsub("_Aligned.out.sorted.dedup.bam", "", colnames(counts))
 
 sample_names <- colnames(counts)
 timepoint <- sub("^(T[0-9]+).*$", "\\1", sample_names)
