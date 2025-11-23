@@ -7,10 +7,10 @@
 
 # ---- File and directory setup ----
 species <- "S. cerevisiae"
-counts_file <- "gene_counts_T_cer_stringent.txt"
+counts_file <- "gene_counts_cerevisiae.txt"
 gtf_file    <- "Saccharomyces_cerevisiae.R64-1-1.114.gtf"
-output_dir  <- "csv_results_cerevisiae_T_stringent_padj"
-plots_dir   <- "pdf_plots_cerevisiae_T_stringent_padj"
+output_dir  <- "csv_results_cerevisiae"
+plots_dir   <- "pdf_plots_cerevisiae"
 dir.create(output_dir, showWarnings = FALSE)
 dir.create(plots_dir,  showWarnings = FALSE)
 
