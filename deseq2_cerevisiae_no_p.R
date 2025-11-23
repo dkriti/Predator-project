@@ -68,7 +68,7 @@ wrap_text <- function(x, width=42){
 # ---- Load & preprocess ----
 counts <- read.table(counts_file, header=TRUE, row.names=1, comment.char="#")
 counts <- counts[, 6:ncol(counts)]
-colnames(counts) <- gsub("_clean_stringent_cer_Aligned.out.sorted.dedup.bam", "", colnames(counts))
+colnames(counts) <- gsub("_Aligned.out.sorted.dedup.bam", "", colnames(counts))
 
 sample_names <- colnames(counts)
 timepoint <- sub("^(T[0-9]+).*$", "\\1", sample_names)
