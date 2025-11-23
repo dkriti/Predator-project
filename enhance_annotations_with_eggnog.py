@@ -5,7 +5,7 @@ import argparse
 
 def parse_emapper(emapper_tsv):
     """
-    Robustly read an eggNOG-mapper TSV:
+    Read an eggNOG-mapper TSV:
       - Skip any leading comments until the header line
       - Strip a leading '#' from the header if present
       - Use the first column (whatever it's named) as the query ID
@@ -130,7 +130,7 @@ def main():
 
     ann = parse_emapper(args.emapper_tsv)
     annotate_gtf(args.gtf_in, args.gtf_out, ann)
-    print(f"✔  Written enhanced GTF to: {args.gtf_out}")
+    print(f"Written enhanced GTF to: {args.gtf_out}")
 
 if __name__ == "__main__":
     main()
